@@ -1,0 +1,65 @@
+<html>
+<head>
+<script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
+<script src="https://rawgit.com/feiss/aframe-environment-component/master/dist/aframe-environment-component.min.js"></script>
+</head>
+<body>
+<a-scene botdraw="true">
+<a-entity light="color: #white; intensity: 1.5" position="-10 10 -10"></a-entity>
+<a-entity environment="preset: forest"></a-entity>
+
+<a-entity position="-20 0 0" rotation="0 -100 0">
+<a-camera></a-camera>
+</a-entity>
+
+
+
+
+
+
+
+
+<a-assets>
+<a-asset-item id="garden_obj" src="/models/garden.obj"></a-asset-item>
+<a-asset-item id="garden_mtl" src="/models/garden.mtl"></a-asset-item>
+</a-assets>
+<a-obj-model src="#garden_obj" 
+			mtl="#garden_mtl" 
+			position="0 0 0" 
+			rotation="-90 0 0"
+			scale="0.25 0.25 0.25"
+			>
+</a-obj-model>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a-assets>
+<img id="mario" src="/images/mario.jpg">
+</a-assets>
+
+<a-image src="#mario"
+	position="0 30 0"
+	rotation="0 90 0"
+	scale="20 20 20">
+</a-image>
+
+
+
+
+
+
+</a-scene>
+</body>
+</html>
+
