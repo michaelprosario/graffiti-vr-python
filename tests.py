@@ -18,6 +18,38 @@ class TestStringMethods(unittest.TestCase):
 		
 			self.assertTrue(elements[0]["type"] == "box")
 
+    def test_Bot__drawBoxAt__failOnBadWidth(self):
+			bot = Bot()
+			with self.assertRaises(Exception) as context:
+				bot.drawBoxAt("cat",3,3,1,2,3)
+
+    def test_Bot__drawBoxAt__failOnBadHeight(self):
+			bot = Bot()
+			with self.assertRaises(Exception) as context:
+				bot.drawBoxAt(3.12,"cat",3,1,2,3)
+
+    def test_Bot__drawBoxAt__failOnBadDepth(self):
+			bot = Bot()
+			with self.assertRaises(Exception) as context:
+				bot.drawBoxAt(3.12,3,"cat",1,2,3)
+			
+
+    def test_Bot__drawBoxAt__failOnBadX(self):
+			bot = Bot()
+			with self.assertRaises(Exception) as context:
+				bot.drawBoxAt(3.12,3,3,"bad",2,3)
+
+    def test_Bot__drawBoxAt__failOnBadYself(self):
+			bot = Bot()
+			with self.assertRaises(Exception) as context:
+				bot.drawBoxAt(3.12,3,3,1,"bad",3)
+
+    def test_Bot__drawBoxAt__failOnBadZ(self):
+			bot = Bot()
+			with self.assertRaises(Exception) as context:
+				bot.drawBoxAt(3.12,3,3,1,2,"bad")
+
+
     def test_Bot__drawBox(self):
 			bot = Bot()
 			bot.drawBox(4,5,6)
@@ -28,6 +60,11 @@ class TestStringMethods(unittest.TestCase):
 			self.assertTrue(elements[0]["height"] == 5)
 			self.assertTrue(elements[0]["depth"] == 6)
 
+    def test_Bot__drawBox__FailOnBadWidth(self):
+			bot = Bot()
+
+			with self.assertRaises(Exception) as context:
+				bot.drawBox("bad",5,6)
 
     def test_Bot__drawSphere(self):
 			bot = Bot()
@@ -61,6 +98,55 @@ class TestStringMethods(unittest.TestCase):
 			self.assertTrue(elements[0]["scale"] == scale)
 			self.assertTrue(elements[0]["rotation"] == rotation)
 			self.assertTrue(elements[0]["model_name"] == model_name)
+
+
+    def test_Bot__drawObjFile__FailWithBadRotation(self):
+			bot = Bot()
+			scale = 0.25
+			rotation = "bad"
+			model_name = "thing1"
+
+			with self.assertRaises(Exception) as context:
+				bot.drawObjFile(scale, rotation, model_name)
+
+    def test_Bot__drawObjFile__FailWithBadRotation1(self):
+			bot = Bot()
+			scale = 0.25
+			rotation = "bad 0 0"
+			model_name = "thing1"
+
+			with self.assertRaises(Exception) as context:
+				bot.drawObjFile(scale, rotation, model_name)
+
+    def test_Bot__drawObjFile__FailWithBadRotation2(self):
+			bot = Bot()
+			scale = 0.25
+			rotation = "0 bad 0"
+			model_name = "thing1"
+
+			with self.assertRaises(Exception) as context:
+				bot.drawObjFile(scale, rotation, model_name)
+
+    def test_Bot__drawObjFile__FailWithBadRotation3(self):
+			bot = Bot()
+			scale = 0.25
+			rotation = "0 0 bad"
+			model_name = "thing1"
+
+			with self.assertRaises(Exception) as context:
+				bot.drawObjFile(scale, rotation, model_name)
+
+    def test_Bot__drawObjFile__FailWithBadRotation4(self):
+			bot = Bot()
+			scale = 0.25
+			rotation = 3.14
+			model_name = "thing1"
+
+			with self.assertRaises(Exception) as context:
+				bot.drawObjFile(scale, rotation, model_name)
+
+
+
 
     def test_Bot__drawImageFile(self):
 			bot = Bot()
