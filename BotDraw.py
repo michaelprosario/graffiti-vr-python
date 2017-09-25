@@ -243,8 +243,8 @@ class Bot:
 		if not isinstance(steps, numbers.Number):		
 			raise Exception("steps is not a number.")
 		
-		deltaX = steps * math.sin(self.angle)
-		deltaZ = steps * math.cos(self.angle)
+		deltaX = steps * math.cos(self.angle)
+		deltaZ = steps * math.sin(self.angle)
 		self.x += deltaX
 		self.z += deltaZ
 		

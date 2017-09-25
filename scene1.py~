@@ -61,7 +61,7 @@ for x in range(0,20):
 #======================================================================
 
 bot.moveToLocation("start")
-bot.forward(-50)
+bot.forward(30)
 scale = 0.25
 rotation = "-90 0 0"
 model_name = "thing1"
