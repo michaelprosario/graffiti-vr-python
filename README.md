@@ -91,6 +91,34 @@ print("Scene created.")
 * Navigate to http://localhost:8000/
 
 
+# Drawing a JPEG image
+
+```python
+
+# Scale the image by 20 times
+scale_factor = 20
+
+# Rotate the image about the y-axis 90 degrees
+rotation = "0 90 0"
+
+# Set the image to Mario
+image = "mario" 
+bot.drawImageFile(scale_factor,rotation, image)
+```
+# Drawing a 3D model file 
+
+```python
+scale = 0.25
+
+#rotate the 3D model about the x-axis by -90
+rotation = "-90 0 0"
+
+# Note: All 3D model files should be in 'obj' format.   The 'obj' file and 'mtl' file should be located in the models folder.
+model_name = "garden"
+bot.drawObjFile(scale, rotation, model_name)
+```
+
+
 
 
  
