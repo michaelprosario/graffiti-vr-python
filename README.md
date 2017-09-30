@@ -15,39 +15,6 @@ https://noon-afterthought.glitch.me/sample1.html
 
 Try to build python code to draw those structures.  If you want to see the solution, check out 'sample1.py' in this code repository. 
 
-# Bot Draw methods
-
-In order to draw, you start by creating an instance of the bot. The bot object has additional methods for drawing, turning, or moving.
-
-bot = Bot()
-
-# Moving and turning:
-
-* bot.moveUp(steps) – Move the bot upward a few steps
-* bot.forward(steps) – Move bot forward a few steps
-* bot.moveLeft(steps) – Move bot left
-* bot.moveRight(steps) – Move bot right
-* bot.setAngle(degrees) – Set angle of direction for the robot. Enter * direction in degrees
-* bot.getAngle() – Get current angle for the robot.
-* bot.turn(angle) – Turn the robot a few degrees.
-
-# Drawing stuff:
-
-* bot.drawBoxAt(width,height,depth,x,y,z) – Draw box at a particular location.
-* bot.drawBox(width,height,depth) – Draw box at current robot location.
-* bot.drawSphere(radius) – Draw sphere at current robot location.
-* bot.drawSphereAt(radius,x,y,z) – Draw sphere at particular location
-
-# Remember locations, Return to locations
-
-* bot.saveLocation(locationName) – Store bot location and give it a name.
-* bot.moveToLocation(locationName) – Return to location by name
-
-# Change colors:
-
-* bot.color = “red”
-
-
 # Install instructions
 
 1. Install Python 2.7
@@ -124,6 +91,39 @@ bot.drawObjFile(scale, rotation, model_name)
 # Where can I learn more about AFrame HTML?
 
 If you want to tweak the HTML in index.html, you are welcome to do so.   You can learn more about Aframe.io at https://aframe.io/docs/0.7.0/introduction/ .
+
+# Bot Draw methods
+
+In order to draw, you start by creating an instance of the bot. The bot object has additional methods for drawing, turning, or moving.
+
+bot = Bot()
+
+# Moving and turning:
+
+* bot.moveUp(steps) – Move the bot upward a few steps
+* bot.forward(steps) – Move bot forward a few steps
+* bot.moveLeft(steps) – Move bot left
+* bot.moveRight(steps) – Move bot right
+* bot.setAngle(degrees) – Set angle of direction for the robot. Enter * direction in degrees
+* bot.getAngle() – Get current angle for the robot.
+* bot.turn(angle) – Turn the robot a few degrees.
+
+# Drawing stuff:
+
+* bot.drawBoxAt(width,height,depth,x,y,z) – Draw box at a particular location.
+* bot.drawBox(width,height,depth) – Draw box at current robot location.
+* bot.drawSphere(radius) – Draw sphere at current robot location.
+* bot.drawSphereAt(radius,x,y,z) – Draw sphere at particular location
+
+# Remember locations, Return to locations
+
+* bot.saveLocation(locationName) – Store bot location and give it a name.
+* bot.moveToLocation(locationName) – Return to location by name
+
+# Change colors:
+
+* bot.color = “red”
+
 
 
 
