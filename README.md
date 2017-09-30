@@ -30,9 +30,10 @@ Try to build python code to draw those structures.  If you want to see the solut
 * Create a file called 'first_scene.py' using your favorite text editor.
 * Enter the following code into first_scene.py:
 
+```python
+
 from BotDraw import *
 
-```python
 # Create a bot
 bot = Bot()
 
