@@ -6,7 +6,7 @@ This project uses a JavaScript framework called AFrame to build 3D content in yo
 
 In Graffiti VR, you command a small bot who can travel in 3D space. The robot can place boxes, spheres, images, and other 3D shapes. This tool borrows ideas from popular code education tools like Logo, code.org, ScriptCraft by Walter Higgins.
 
-You can review a sample scene here: [https://dark-bat.glitch.me/]
+You can review a sample scene here: https://dark-bat.glitch.me/
 
 You can use the keys WASD to move around the scene.
 
@@ -49,13 +49,48 @@ In order to draw, you start by creating an instance of the bot. The bot object h
 
 1. Install Python 2.7
 2. Install pip
-3. Execute the following:
-
-pip install Jinja2
-
-4. Download Graffiti VR Python from here:[https://github.com/michaelprosario/graffiti-vr-python/archive/master.zip]
-
+3. Execute the following: pip install Jinja2
+4. Download Graffiti VR Python from here:  https://github.com/michaelprosario/graffiti-vr-python/archive/master.zip
 5. Extract the zip file.
+
+# Drawing your first scene
+
+* Open a terminal or command prompt.
+* Navigate into the source folder. (cd graffiti-vr-python-master)
+* Create a file called 'first_scene.py' using your favorite text editor.
+* Enter the following code into first_scene.py:
+
+from BotDraw import *
+
+```python
+# Create a bot
+bot = Bot()
+
+# Stores the bots current location and angle
+bot.saveLocation("start")
+
+# Bot draws boxes moving upward
+for x in range(0,10):
+	bot.drawBox(1,1,1)
+	bot.moveUp(2)
+
+# Move the bot back to start
+bot.moveToLocation("start")
+
+# Convert actions of bot to AFrame.io HTML file.  
+sceneMaker = SceneMaker()
+sceneMaker.Save(bot.getElements(),"index.html")
+print("Scene created.")
+```
+
+* Execute the following: python first_scene.py
+* The system should update index.html.
+* Execute the following: python -m SimpleHTTPServer
+* Python should start a small web server in your current directory.
+* Open up FireFox or Google Chrome.
+* Navigate to http://localhost:8000/
+
+
 
 
  
