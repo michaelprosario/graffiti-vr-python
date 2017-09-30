@@ -117,7 +117,9 @@ rotation = "-90 0 0"
 model_name = "garden"
 bot.drawObjFile(scale, rotation, model_name)
 ```
+# I want to tweak the HTML in index.html.  Where can I learn more about AFrame HTML?
 
+https://aframe.io/docs/0.7.0/introduction/
 
 
 
