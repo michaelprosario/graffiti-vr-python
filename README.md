@@ -10,6 +10,11 @@ You can review a sample scene here: https://dark-bat.glitch.me/
 
 You can use the keys WASD to move around the scene.
 
+Here's another sample scene:
+https://noon-afterthought.glitch.me/sample1.html
+
+Try to build python code to draw those structures.  If you want to see the solution, check out 'sample1.py' in this code repository. 
+
 # Bot Draw methods
 
 In order to draw, you start by creating an instance of the bot. The bot object has additional methods for drawing, turning, or moving.
@@ -88,6 +93,7 @@ print("Scene created.")
 * Open up FireFox or Google Chrome.
 * Navigate to http://localhost:8000/
 
+Sample output: https://noon-afterthought.glitch.me/
 
 # Drawing a JPEG image
 
