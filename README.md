@@ -32,8 +32,6 @@ bot = Bot()
 * bot.drawBox(width,height,depth) – Draw box at current robot location.
 * bot.drawSphere(radius) – Draw sphere at current robot location.
 * bot.drawSphereAt(radius,x,y,z) – Draw sphere at particular location
-* bot.drawImageAt(strPath,width, height, x,y,z) – Draw image at particular location. The path should be a fully qualified path to a valid web image.
-* bot.drawImage(strFile,width,height) – Draw image at bot location.  The file should be located in the 'images' folder.
 
 # Remember locations, Return to locations
 
@@ -117,9 +115,11 @@ rotation = "-90 0 0"
 model_name = "garden"
 bot.drawObjFile(scale, rotation, model_name)
 ```
-# I want to tweak the HTML in index.html.  Where can I learn more about AFrame HTML?
+# Where can I learn more about AFrame HTML?
 
-https://aframe.io/docs/0.7.0/introduction/
+If you want to tweak the HTML in index.html, you are welcome to do so.   You can learn more about Aframe.io at https://aframe.io/docs/0.7.0/introduction/ .
+
+
 
 
 
