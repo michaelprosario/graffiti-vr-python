@@ -44,4 +44,18 @@ In order to draw, you start by creating an instance of the bot. The bot object h
 
 * bot.drawColor = “red”
 
+
+# Install instructions
+
+1. Install Python 2.7
+2. Install pip
+3. Execute the following:
+
+pip install Jinja2
+
+4. Download Graffiti VR Python from here:[https://github.com/michaelprosario/graffiti-vr-python/archive/master.zip]
+
+5. Extract the zip file.
+
+
  
