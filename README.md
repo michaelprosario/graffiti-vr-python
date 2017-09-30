@@ -14,35 +14,35 @@ You can use the keys WASD to move around the scene.
 
 In order to draw, you start by creating an instance of the bot. The bot object has additional methods for drawing, turning, or moving.
 
+bot = Bot()
+
 # Moving and turning:
 
-* moveUp(steps) – Move the bot upward a few steps
-* forward(steps) – Move bot forward a few steps
-* moveLeft(steps) – Move bot left
-* moveRight(steps) – Move bot right
-* setAngle(degrees) – Set angle of direction for the robot. Enter * direction in degrees
-* getAngle() – Get current angle for the robot.
-* turn(angle) – Turn the robot a few degrees.
+* bot.moveUp(steps) – Move the bot upward a few steps
+* bot.forward(steps) – Move bot forward a few steps
+* bot.moveLeft(steps) – Move bot left
+* bot.moveRight(steps) – Move bot right
+* bot.setAngle(degrees) – Set angle of direction for the robot. Enter * direction in degrees
+* bot.getAngle() – Get current angle for the robot.
+* bot.turn(angle) – Turn the robot a few degrees.
 
 # Drawing stuff:
 
-* drawBoxAt(width,height,depth,x,y,z) – Draw box at a particular location.
-* drawBox(width,height,depth) – Draw box at current robot location.
-* drawSphere(radius) – Draw sphere at current robot location.
-* drawSphereAt(radius,x,y,z) – Draw sphere at particular location
-* drawCone(radius,height)
-* drawCylinder(radius,height)
-* drawImageAt(strPath,width, height, x,y,z) – Draw image at particular location. The path should be a fully qualified path to a valid web image.
-* drawImage(strPath,width,height) – Draw image at bot location. The path should be a fully qualified path to a valid web image.
+* bot.drawBoxAt(width,height,depth,x,y,z) – Draw box at a particular location.
+* bot.drawBox(width,height,depth) – Draw box at current robot location.
+* bot.drawSphere(radius) – Draw sphere at current robot location.
+* bot.drawSphereAt(radius,x,y,z) – Draw sphere at particular location
+* bot.drawImageAt(strPath,width, height, x,y,z) – Draw image at particular location. The path should be a fully qualified path to a valid web image.
+* bot.drawImage(strFile,width,height) – Draw image at bot location.  The file should be located in the 'images' folder.
 
 # Remember locations, Return to locations
 
-* saveLocation(locationName) – Store bot location and give it a name.
-* moveToLocation(locationName) – Return to location by name
+* bot.saveLocation(locationName) – Store bot location and give it a name.
+* bot.moveToLocation(locationName) – Return to location by name
 
 # Change colors:
 
-* bot.drawColor = “red”
+* bot.color = “red”
 
 
 # Install instructions
