@@ -1,0 +1,76 @@
+<html>
+<head>
+<script src="http://aframe.io/releases/0.6.1/aframe.min.js"></script>
+<script src="http://rawgit.com/jeromeetienne/ar.js/master/aframe/build/aframe-ar.js"></script>
+<script>THREEx.ArToolkitContext.baseURL = 'http://rawgit.com/jeromeetienne/ar.js/master/three.js/'</script>
+
+
+</head>
+<body>
+<a-scene botdraw="true" embedded artoolkit='sourceType: webcam;'>
+<a-entity light="color: #white; intensity: 1.5" position="-10 10 -10"></a-entity>
+
+
+<a-entity position="-20 0 0" rotation="0 -100 0">
+<a-camera></a-camera>
+</a-entity>
+
+{% for element in elements %}
+
+{% if element.type == "box" %}
+<a-box color="{{element.color}}" 
+	depth="{{element.depth}}" 
+	height="{{element.height}}" 
+	width="{{element.width}}" 
+	position="{{element.x}} {{element.y}} {{element.z}}" 
+	rotation="{{element.rotationx}} {{element.rotationy}} {{element.rotationz}}"
+	></a-box>
+{% endif %}
+
+{% if element.type == "sphere" %}
+<a-sphere color="{{element.color}}" 
+	  radius="{{element.radius}}"
+	  position="{{element.x}} {{element.y}} {{element.z}}" 
+	></a-sphere>
+{% endif %}
+
+{% if element.type == "obj-model" %}
+<a-assets>
+<a-asset-item id="{{element.model_name}}_obj" src="/models/{{element.model_name}}.obj"></a-asset-item>
+<a-asset-item id="{{element.model_name}}_mtl" src="/models/{{element.model_name}}.mtl"></a-asset-item>
+</a-assets>
+<a-obj-model src="#{{element.model_name}}_obj" 
+			mtl="#{{element.model_name}}_mtl" 
+			position="{{element.x}} {{element.y}} {{element.z}}" 
+			rotation="{{element.rotation}}"
+			scale="{{element.scale}} {{element.scale}} {{element.scale}}"
+			>
+</a-obj-model>
+{% endif %}
+
+{% if element.type == "image" %}
+<a-assets>
+<img id="{{element.image_name}}" src="/images/{{element.image_name}}.jpg">
+</a-assets>
+
+<a-image src="#{{element.image_name}}"
+	position="{{element.x}} {{element.y}} {{element.z}}"
+	rotation="{{element.rotation}}"
+	scale="{{element.scale}} {{element.scale}} {{element.scale}}">
+</a-image>
+
+
+{% endif %}
+
+
+{% endfor %}
+
+<a-marker-camera preset='hiro'></a-marker-camera>
+</a-scene>
+</body>
+</html>
+
+
+
+
+

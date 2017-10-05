@@ -1,12 +1,15 @@
 <html>
 <head>
-<script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
-<script src="https://rawgit.com/feiss/aframe-environment-component/master/dist/aframe-environment-component.min.js"></script>
+<script src="http://aframe.io/releases/0.6.1/aframe.min.js"></script>
+<script src="http://rawgit.com/jeromeetienne/ar.js/master/aframe/build/aframe-ar.js"></script>
+<script>THREEx.ArToolkitContext.baseURL = 'http://rawgit.com/jeromeetienne/ar.js/master/three.js/'</script>
+
+
 </head>
 <body>
-<a-scene botdraw="true">
+<a-scene botdraw="true" embedded artoolkit='sourceType: webcam;'>
 <a-entity light="color: #white; intensity: 1.5" position="-10 10 -10"></a-entity>
-<a-entity environment="preset: forest"></a-entity>
+
 
 <a-entity position="-20 0 0" rotation="0 -100 0">
 <a-camera></a-camera>
@@ -15,9 +18,9 @@
 
 
 
-<a-box color="red" 
+<a-box color="purple" 
 	depth="1" 
-	height="1" 
+	height="0.1" 
 	width="1" 
 	position="-0.5 0 0.5" 
 	rotation="0 0.0 0"
@@ -34,544 +37,12 @@
 
 
 
-<a-box color="red" 
+<a-box color="purple" 
 	depth="1" 
-	height="1" 
+	height="0.1" 
 	width="1" 
-	position="0.5 1 0.5" 
-	rotation="0 0.0 0"
-	></a-box>
-
-
-
-
-
-
-
-
-
-
-
-
-<a-box color="red" 
-	depth="1" 
-	height="1" 
-	width="1" 
-	position="1.5 2 0.5" 
-	rotation="0 0.0 0"
-	></a-box>
-
-
-
-
-
-
-
-
-
-
-
-
-<a-box color="red" 
-	depth="1" 
-	height="1" 
-	width="1" 
-	position="2.5 3 0.5" 
-	rotation="0 0.0 0"
-	></a-box>
-
-
-
-
-
-
-
-
-
-
-
-
-<a-box color="red" 
-	depth="1" 
-	height="1" 
-	width="1" 
-	position="3.5 4 0.5" 
-	rotation="0 0.0 0"
-	></a-box>
-
-
-
-
-
-
-
-
-
-
-
-
-<a-box color="red" 
-	depth="1" 
-	height="1" 
-	width="1" 
-	position="4.5 5 0.5" 
-	rotation="0 0.0 0"
-	></a-box>
-
-
-
-
-
-
-
-
-
-
-
-
-<a-box color="red" 
-	depth="1" 
-	height="1" 
-	width="1" 
-	position="5.5 6 0.5" 
-	rotation="0 0.0 0"
-	></a-box>
-
-
-
-
-
-
-
-
-
-
-
-
-<a-box color="red" 
-	depth="1" 
-	height="1" 
-	width="1" 
-	position="6.5 7 0.5" 
-	rotation="0 0.0 0"
-	></a-box>
-
-
-
-
-
-
-
-
-
-
-
-
-<a-box color="red" 
-	depth="1" 
-	height="1" 
-	width="1" 
-	position="7.5 8 0.5" 
-	rotation="0 0.0 0"
-	></a-box>
-
-
-
-
-
-
-
-
-
-
-
-
-<a-box color="red" 
-	depth="1" 
-	height="1" 
-	width="1" 
-	position="8.5 9 0.5" 
-	rotation="0 0.0 0"
-	></a-box>
-
-
-
-
-
-
-
-
-
-
-
-
-<a-box color="blue" 
-	depth="1" 
-	height="1" 
-	width="1" 
-	position="-0.5 0 -9.5" 
-	rotation="0 0.0 0"
-	></a-box>
-
-
-
-
-
-
-
-
-
-
-
-
-<a-box color="blue" 
-	depth="1" 
-	height="1" 
-	width="1" 
-	position="-0.5 1 -10.5" 
-	rotation="0 0.0 0"
-	></a-box>
-
-
-
-
-
-
-
-
-
-
-
-
-<a-box color="blue" 
-	depth="1" 
-	height="1" 
-	width="1" 
-	position="-0.5 2 -11.5" 
-	rotation="0 0.0 0"
-	></a-box>
-
-
-
-
-
-
-
-
-
-
-
-
-<a-box color="blue" 
-	depth="1" 
-	height="1" 
-	width="1" 
-	position="-0.5 3 -12.5" 
-	rotation="0 0.0 0"
-	></a-box>
-
-
-
-
-
-
-
-
-
-
-
-
-<a-box color="blue" 
-	depth="1" 
-	height="1" 
-	width="1" 
-	position="-0.5 4 -13.5" 
-	rotation="0 0.0 0"
-	></a-box>
-
-
-
-
-
-
-
-
-
-
-
-
-<a-box color="blue" 
-	depth="1" 
-	height="1" 
-	width="1" 
-	position="-0.5 5 -14.5" 
-	rotation="0 0.0 0"
-	></a-box>
-
-
-
-
-
-
-
-
-
-
-
-
-<a-box color="blue" 
-	depth="1" 
-	height="1" 
-	width="1" 
-	position="-0.5 6 -15.5" 
-	rotation="0 0.0 0"
-	></a-box>
-
-
-
-
-
-
-
-
-
-
-
-
-<a-box color="blue" 
-	depth="1" 
-	height="1" 
-	width="1" 
-	position="-0.5 7 -16.5" 
-	rotation="0 0.0 0"
-	></a-box>
-
-
-
-
-
-
-
-
-
-
-
-
-<a-box color="blue" 
-	depth="1" 
-	height="1" 
-	width="1" 
-	position="-0.5 8 -17.5" 
-	rotation="0 0.0 0"
-	></a-box>
-
-
-
-
-
-
-
-
-
-
-
-
-<a-box color="blue" 
-	depth="1" 
-	height="1" 
-	width="1" 
-	position="-0.5 9 -18.5" 
-	rotation="0 0.0 0"
-	></a-box>
-
-
-
-
-
-
-
-
-
-
-
-
-<a-box color="green" 
-	depth="1" 
-	height="1" 
-	width="1" 
-	position="-0.5 0 10.5" 
-	rotation="0 0.0 0"
-	></a-box>
-
-
-
-
-
-
-
-
-
-
-
-
-<a-box color="green" 
-	depth="1" 
-	height="1" 
-	width="1" 
-	position="-0.5 1 11.5" 
-	rotation="0 0.0 0"
-	></a-box>
-
-
-
-
-
-
-
-
-
-
-
-
-<a-box color="green" 
-	depth="1" 
-	height="1" 
-	width="1" 
-	position="-0.5 2 12.5" 
-	rotation="0 0.0 0"
-	></a-box>
-
-
-
-
-
-
-
-
-
-
-
-
-<a-box color="green" 
-	depth="1" 
-	height="1" 
-	width="1" 
-	position="-0.5 3 13.5" 
-	rotation="0 0.0 0"
-	></a-box>
-
-
-
-
-
-
-
-
-
-
-
-
-<a-box color="green" 
-	depth="1" 
-	height="1" 
-	width="1" 
-	position="-0.5 4 14.5" 
-	rotation="0 0.0 0"
-	></a-box>
-
-
-
-
-
-
-
-
-
-
-
-
-<a-box color="green" 
-	depth="1" 
-	height="1" 
-	width="1" 
-	position="-0.5 5 15.5" 
-	rotation="0 0.0 0"
-	></a-box>
-
-
-
-
-
-
-
-
-
-
-
-
-<a-box color="green" 
-	depth="1" 
-	height="1" 
-	width="1" 
-	position="-0.5 6 16.5" 
-	rotation="0 0.0 0"
-	></a-box>
-
-
-
-
-
-
-
-
-
-
-
-
-<a-box color="green" 
-	depth="1" 
-	height="1" 
-	width="1" 
-	position="-0.5 7 17.5" 
-	rotation="0 0.0 0"
-	></a-box>
-
-
-
-
-
-
-
-
-
-
-
-
-<a-box color="green" 
-	depth="1" 
-	height="1" 
-	width="1" 
-	position="-0.5 8 18.5" 
-	rotation="0 0.0 0"
-	></a-box>
-
-
-
-
-
-
-
-
-
-
-
-
-<a-box color="green" 
-	depth="1" 
-	height="1" 
-	width="1" 
-	position="-0.5 9 19.5" 
-	rotation="0 0.0 0"
+	position="-0.5 0.1 0.5" 
+	rotation="0 5.0 0"
 	></a-box>
 
 
@@ -587,10 +58,10 @@
 
 <a-box color="purple" 
 	depth="1" 
-	height="1" 
+	height="0.1" 
 	width="1" 
-	position="-0.5 0 20.5" 
-	rotation="0 0.0 0"
+	position="-0.5 0.2 0.5" 
+	rotation="0 10.0 0"
 	></a-box>
 
 
@@ -606,10 +77,10 @@
 
 <a-box color="purple" 
 	depth="1" 
-	height="1" 
+	height="0.1" 
 	width="1" 
-	position="-1.5 1 20.5" 
-	rotation="0 0.0 0"
+	position="-0.5 0.3 0.5" 
+	rotation="0 15.0 0"
 	></a-box>
 
 
@@ -625,10 +96,10 @@
 
 <a-box color="purple" 
 	depth="1" 
-	height="1" 
+	height="0.1" 
 	width="1" 
-	position="-2.5 2 20.5" 
-	rotation="0 0.0 0"
+	position="-0.5 0.4 0.5" 
+	rotation="0 20.0 0"
 	></a-box>
 
 
@@ -644,10 +115,10 @@
 
 <a-box color="purple" 
 	depth="1" 
-	height="1" 
+	height="0.1" 
 	width="1" 
-	position="-3.5 3 20.5" 
-	rotation="0 0.0 0"
+	position="-0.5 0.5 0.5" 
+	rotation="0 25.0 0"
 	></a-box>
 
 
@@ -663,10 +134,10 @@
 
 <a-box color="purple" 
 	depth="1" 
-	height="1" 
+	height="0.1" 
 	width="1" 
-	position="-4.5 4 20.5" 
-	rotation="0 0.0 0"
+	position="-0.5 0.6 0.5" 
+	rotation="0 30.0 0"
 	></a-box>
 
 
@@ -682,10 +153,10 @@
 
 <a-box color="purple" 
 	depth="1" 
-	height="1" 
+	height="0.1" 
 	width="1" 
-	position="-5.5 5 20.5" 
-	rotation="0 0.0 0"
+	position="-0.5 0.7 0.5" 
+	rotation="0 35.0 0"
 	></a-box>
 
 
@@ -701,10 +172,10 @@
 
 <a-box color="purple" 
 	depth="1" 
-	height="1" 
+	height="0.1" 
 	width="1" 
-	position="-6.5 6 20.5" 
-	rotation="0 0.0 0"
+	position="-0.5 0.8 0.5" 
+	rotation="0 40.0 0"
 	></a-box>
 
 
@@ -720,10 +191,10 @@
 
 <a-box color="purple" 
 	depth="1" 
-	height="1" 
+	height="0.1" 
 	width="1" 
-	position="-7.5 7 20.5" 
-	rotation="0 0.0 0"
+	position="-0.5 0.9 0.5" 
+	rotation="0 45.0 0"
 	></a-box>
 
 
@@ -736,44 +207,11 @@
 
 
 
-
-<a-box color="purple" 
-	depth="1" 
-	height="1" 
-	width="1" 
-	position="-8.5 8 20.5" 
-	rotation="0 0.0 0"
-	></a-box>
-
-
-
-
-
-
-
-
-
-
-
-
-<a-box color="purple" 
-	depth="1" 
-	height="1" 
-	width="1" 
-	position="-9.5 9 20.5" 
-	rotation="0 0.0 0"
-	></a-box>
-
-
-
-
-
-
-
-
-
-
+<a-marker-camera preset='hiro'></a-marker-camera>
 </a-scene>
 </body>
 </html>
+
+
+
 

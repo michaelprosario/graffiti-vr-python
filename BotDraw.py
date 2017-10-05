@@ -7,12 +7,15 @@ import decimal
 from jinja2 import *
 
 class SceneMaker:
+	def __init__(self):
+		self.template_to_load = 'template1.html'
+
 	def Save(self, objElements, strFilename):
 		env = Environment(
 		    loader=PackageLoader('tests', 'templates')
 		)
 
-		template = env.get_template('template1.html')
+		template = env.get_template(self.template_to_load)
 		template_output = template.render(elements = objElements )
 
 		file = open(strFilename,"w")  
